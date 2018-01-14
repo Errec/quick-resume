@@ -28,7 +28,7 @@
           li.template__skills-item
             p Git
           li.template__skills-item
-            p Vue/Angular/jQuery
+            p Vue/Angular/React
           li.template__skills-item
             p Gulp/Webpack
           li.template__skills-item
@@ -100,7 +100,7 @@
           },{
           company: 'FIAT/CTM-UFMG',
           date: 'Jul.2013 - Dec.2015',
-          position: 'Front End Developer',
+          position: 'Research Assistant',
           descriptionList: [
             'Built Computational Fluid Dynamics(CFD) models for turbo injection ethanol engines.',
             'Designed 3D animations for motion and heat analysis.',
@@ -113,13 +113,13 @@
           date: 'Aug.2010-Jul.2016',
           degreeType: 'Bachelors of ',
           course: 'Mechanical Engineer',
-          description: 'Worked with physics simulation'
+          description: 'Unfinished - Worked with physics simulation'
           },{
           name: 'PUC-MG',
           date: 'Feb.2002-Feb.2003',
           degreeType: 'Bachelors of ',
           course: 'Computer Science',
-          description: 'Prospects on Data Structures and C++ basis'
+          description: 'Unfinished - Prospects on Data Structures and C++ basis'
         }],
         additionalExperience: "I work as a photographer in my spare time. I'm also a lover of the seventh art."
       }
@@ -181,10 +181,10 @@
     width: 100%
     color: $resumeDark
     background-color: $resumeLight
-    border:
-      left: solid $resumeDark 1px
-      right: solid $resumeDark 1px
-      bottom: solid $resumeDark 1px
+    // border:
+    //   left: solid $resumeDark 1px
+    //   right: solid $resumeDark 1px
+    //   bottom: solid $resumeDark 1px
   .template__website
     text-align: center
     margin-bottom: 0.2cm
@@ -216,4 +216,6 @@
       background-color: white
     #app
       padding: 0
+      height: $templateHeight
+      width: $templateWidth
 </style>

@@ -4,12 +4,76 @@
 		"selected_items":
 		[
 			[
-				"item",
-				"align-items"
+				"addi",
+				"additional"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"back",
+				"background-color\t(TemplateA.vue)"
+			],
+			[
+				"sty",
+				"style\t<style>"
+			],
+			[
+				"des",
+				"descriptionList\t(TemplateA.vue)"
+			],
+			[
+				"exp",
+				"experience"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-weight"
 			],
 			[
 				"tex",
-				"text-align-last"
+				"text-align"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"MARGIN",
+				"margin-right"
+			],
+			[
+				"addr",
+				"address"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"scri",
+				"script\t<script>"
+			],
+			[
+				"item",
+				"align-items"
 			],
 			[
 				"bac",
@@ -36,10 +100,6 @@
 				"overflow-y"
 			],
 			[
-				"border",
-				"border-radius"
-			],
-			[
 				"bor",
 				"border-radius"
 			],
@@ -58,10 +118,6 @@
 			[
 				"query",
 				"querySelector\t( selectors: DOMString ): Element Element"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"fle",
@@ -88,16 +144,8 @@
 				"require〔function〕"
 			],
 			[
-				"MARGIN",
-				"margin-top"
-			],
-			[
 				"u",
 				"uppercase"
-			],
-			[
-				"text",
-				"text-transform"
 			],
 			[
 				"trna",
@@ -138,14 +186,6 @@
 			[
 				"data",
 				"dataset\t(_main.js)"
-			],
-			[
-				"marg",
-				"margin-top"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"padding",
@@ -202,10 +242,6 @@
 			[
 				"pro",
 				"property"
-			],
-			[
-				"add",
-				"addEventListener\t( type: DOMString, callback: EventListener, capture?: boolean ): void EventTarget"
 			],
 			[
 				"order",
@@ -322,10 +358,6 @@
 			[
 				"inp",
 				"inputBtn"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"errec",
@@ -482,38 +514,6 @@
 			[
 				"lin",
 				"line-height"
-			],
-			[
-				"margin-",
-				"margin-left\t(main-hero.sass)"
-			],
-			[
-				"conso",
-				"console_log"
-			],
-			[
-				"index",
-				"indexOf\t( searchElement: any, fromIndex?: int ): int Array"
-			],
-			[
-				"hero",
-				"heroHeight"
-			],
-			[
-				"cons",
-				"console.log"
-			],
-			[
-				"trasn",
-				"transition"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"lig",
-				"color__light"
 			]
 		]
 	},
@@ -528,9 +528,17 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "prett",
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"vue",
+				"Set Syntax: Vue Component"
+			],
 			[
 				"prett",
 				"HTMLPrettify"
@@ -558,10 +566,6 @@
 			[
 				"",
 				"About"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"remove",
@@ -650,6 +654,13 @@
 	],
 	"file_history":
 	[
+		"/home/raniro/Projects/Vue/quick-resume/src/components/templates/TemplateA.vue",
+		"/home/raniro/Projects/Vue/quick-resume/src/components/templates/ExperienceBox.vue",
+		"/home/raniro/Projects/Vue/quick-resume/src/App.vue",
+		"/home/raniro/Projects/Vue/quick-resume/index.html",
+		"/home/raniro/Projects/Vue/quick-resume/src/components/Home.vue",
+		"/home/raniro/Projects/Vue/quick-resume/src/router/index.js",
+		"/home/raniro/Projects/Vue/quick-resume/src/main.js",
 		"/home/raniro/Projects/Misc/vertical-progress-bar/index.pug",
 		"/home/raniro/Projects/Misc/vertical-progress-bar/styles/main.scss",
 		"/home/raniro/Projects/Misc/vertical-progress-bar/js/main.js",
@@ -770,14 +781,7 @@
 		"/home/raniro/Projects/Misc/factory/templates/main/displays/modelo-receita.pug",
 		"/home/raniro/Projects/Misc/factory/templates/main/displays/config-servico.pug",
 		"/home/raniro/Projects/Misc/factory/templates/main/section-display.pug",
-		"/home/raniro/Projects/Misc/factory/styles/modules/main/forms/_form.sass",
-		"/home/raniro/Projects/Misc/factory/index.pug",
-		"/home/raniro/Projects/Misc/factory/.gitignore",
-		"/home/raniro/Projects/Misc/factory/styles/general-modifiers.sass",
-		"/home/raniro/Projects/Misc/factory/styles/modules/main/forms/form.sass",
-		"/home/raniro/Projects/Misc/factory/styles/modules/main/section-forms.sass",
-		"/home/raniro/Projects/Misc/factory/templates/main/forms/config-publicador.pug",
-		"/home/raniro/Projects/Misc/factory/templates/main/section-forms.pug"
+		"/home/raniro/Projects/Misc/factory/styles/modules/main/forms/_form.sass"
 	],
 	"find":
 	{
@@ -795,6 +799,18 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"margin",
+			"bold",
+			"solid",
+			"li",
+			"company",
+			"web app",
+			"35",
+			"p ",
+			"li\n            p",
+			"• ",
+			"li",
+			"summary",
 			".list__items",
 			" image: url(../img/cha",
 			"ter/",
@@ -1099,7 +1115,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 200.0,
+	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

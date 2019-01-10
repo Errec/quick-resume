@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Deve",
+				"Developer"
+			],
+			[
 				"addi",
 				"additional"
 			],
@@ -510,10 +514,6 @@
 			[
 				"child",
 				"childNodes\t: NodeList Node"
-			],
-			[
-				"lin",
-				"line-height"
 			]
 		]
 	},
@@ -650,11 +650,15 @@
 	},
 	"expanded_folders":
 	[
-		"/home/raniro/Projects/Vue/quick-resume"
+		"/home/raniro/Projects/Vue/quick-resume",
+		"/home/raniro/Projects/Vue/quick-resume/src",
+		"/home/raniro/Projects/Vue/quick-resume/src/components",
+		"/home/raniro/Projects/Vue/quick-resume/src/components/templates"
 	],
 	"file_history":
 	[
 		"/home/raniro/Projects/Vue/quick-resume/src/components/templates/TemplateA.vue",
+		"/home/raniro/Desktop/arrow.svg",
 		"/home/raniro/Projects/Vue/quick-resume/src/components/templates/ExperienceBox.vue",
 		"/home/raniro/Projects/Vue/quick-resume/src/App.vue",
 		"/home/raniro/Projects/Vue/quick-resume/index.html",
@@ -775,7 +779,6 @@
 		"/home/raniro/Projects/Misc/factory/styles/modules/main/displays/config-servico.sass",
 		"/home/raniro/Projects/Misc/factory/styles/modules/main/displays/config-publicador.sass",
 		"/home/raniro/Projects/Misc/factory/img/config-arrow.svg",
-		"/home/raniro/Desktop/arrow.svg",
 		"/home/raniro/Projects/Misc/factory/styles/modules/main/section-display.sass",
 		"/home/raniro/Projects/Misc/factory/templates/main/displays/integracoes.pug",
 		"/home/raniro/Projects/Misc/factory/templates/main/displays/modelo-receita.pug",
@@ -785,7 +788,7 @@
 	],
 	"find":
 	{
-		"height": 72.0
+		"height": 73.0
 	},
 	"find_in_files":
 	{
@@ -796,9 +799,20 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"react",
+			"Front-end",
+			"front-end",
+			"Front-end",
+			"front-end",
+			"Front-end",
+			"Front end",
+			"Front",
+			"nee",
+			"Reac",
+			"Vue",
 			"margin",
 			"bold",
 			"solid",
@@ -880,7 +894,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -925,7 +939,7 @@
 	"project": "quick-resume.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

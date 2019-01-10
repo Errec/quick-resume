@@ -1,7 +1,7 @@
 <template lang="pug">
   div.template
     header.template__header
-      h1.template__name {{name.first}} {{name.last}}
+      h1.template__name <b>{{name.first}} {{name.last}}</b>
       div.template__info
         div.template__address
           p {{address.number}} {{address.street}}, {{address.city}}/{{address.state}}, {{address.country}} {{address.zip}}
@@ -9,12 +9,12 @@
           p {{contact.phone}} ● {{contact.email}}
     main.template__main
       section.template__website
-        p {{website}}
+        p Website: {{website}}
       section.template__summary
         div.template-title
           h2 professional summary
         div.template__summary-content
-          p Prolific, web-based Front end developer working on new and existing micro-sites, landing pages, and templates. Executed and contributed to full-stack web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.
+          p Prolific, web-based <b>Front-end developer</b> working on new and live micro-sites, landing pages, and templates. Executed and contributed to full-stack web development projects, with an emphasis on front-end features, browser manipulation, and cross-browser compatibility. Great English communication skills.
       section.template__skills
         div.template-title
           h2 key skills
@@ -28,7 +28,7 @@
           li.template__skills-item
             p Git
           li.template__skills-item
-            p Vue/Angular/React
+            p Vue/React
           li.template__skills-item
             p Gulp/Webpack
           li.template__skills-item
@@ -66,7 +66,7 @@
         },
         address: {
           number: 615,
-          street: 'Rua dos Aimores',
+          street: 'Aimores',
           city: 'Belo Horizonte',
           country: 'Brazil',
           state: 'MG',
@@ -74,13 +74,23 @@
         },
         contact: {
           email: 'ranirocoelho@gmail.com',
-          phone: '+55-31-99407-9886'
+          phone: '+55-31-993086531'
         },
         website: 'www.errec.surge.sh',
         expeciences: [{
+          company: 'Freelancer-Brazil/Ireland',
+          date: 'Feb.2015 - Present',
+          position: 'Front-end Developer',
+          descriptionList: [
+            'Built an sales Web App to product on-line consulting increasing company efficiency.',
+            'Developed demography consulting Web App for the State Nursing Board.',
+            'Built front-end interface for an tourism agency portal adding reusable modules for maintainability.',
+            'Rebuild the Brazilian Dam Committee portal adding mobile responsiveness.',
+          ]
+          },{
           company: 'Raro Labs',
-          date: 'Sep.2017 - Present',
-          position: 'Front End Developer',
+          date: 'Sep.2017 - Jul.2018',
+          position: 'Front-end Developer',
           descriptionList: [
             'Collaborate with creative and development teams on the execution of ideas and projects.',
             'Closely worked with back-end developers to a build faster front-back API integration.',
@@ -88,32 +98,28 @@
             'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
           ]
           },{
-          company: 'Freelancer',
-          date: 'Feb.2016 - Present',
-          position: 'Front End Developer',
-          descriptionList: [
-            'Built an sales Web App to product on-line consulting increasing company efficiency.',
-            'Developed demography consulting Web App for the State Nursing Board.',
-            'Built front end interface for an tourism agency portal adding reusable modules for maintainability.',
-            'Rebuild the Brazilian Dam Committee portal adding mobile responsiveness.',
-          ]
-          },{
           company: 'FIAT/CTM-UFMG',
           date: 'Jul.2013 - Dec.2015',
-          position: 'Research Assistant',
+          position: 'Simulation Developer',
           descriptionList: [
             'Built Computational Fluid Dynamics(CFD) models for turbo injection ethanol engines.',
-            'Designed 3D animations for motion and heat analysis.',
+            'Developed Java, C++ and Fortran routines to improve my team work flow.',
+            'Designed 3D animations for motion and heat analysis. Using softwares like STAR-CCM+ and OpenFOAM',
             'Helped to improve geometric positioning of ICE valves and injectors though CFD results.',
-            'Developed Java routines to improve my team work flow.',
           ]
         }],
         educationalInstitutions: [{
+          name: 'OpenClassrooms',
+          date: 'Jan.2018-Present',
+          degreeType: 'Bachelors of ',
+          course: 'Web Development',
+          description: "Currently studying the Front-end Developer path on Europe's largest online education platform."
+          },{
           name: 'Federal University of Minas Gerais',
           date: 'Aug.2010-Jul.2016',
           degreeType: 'Bachelors of ',
-          course: 'Mechanical Engineer',
-          description: 'Unfinished - Worked with physics simulation'
+          course: 'Mechanical Engineering',
+          description: 'Worked with computational physics simulation'
           },{
           name: 'PUC-MG',
           date: 'Feb.2002-Feb.2003',
@@ -121,7 +127,7 @@
           course: 'Computer Science',
           description: 'Unfinished - Prospects on Data Structures and C++ basis'
         }],
-        additionalExperience: "I work as a photographer in my spare time. I'm also a lover of the seventh art."
+        additionalExperience: "I work as a photographer in my spare time. Also, as a lover of the seventh art, I'm always going to the movies and film festivals."
       }
     },
     components: {
@@ -134,7 +140,7 @@
   // MOVE TO GENERAL
   $templateHeight: 29.7cm
   $templateWidth: 21cm
-  $headerHeight: 2.4cm
+  $headerHeight: 2cm
   $mainHeight: $templateHeight - $headerHeight
   $resumeLight: #fff
   $resumeDark: #545454
@@ -152,12 +158,12 @@
     padding: 1cm 0
   .template
     height: $templateHeight
-    color: white
+    color: #f5f5f5
     width: $templateWidth
     margin: 0 auto
     font-size: 0.36cm
   .template__header
-    background-color: #0ba940
+    background-color: #4caf50
     height: $headerHeight
     width: 100%
     display: flex
@@ -181,10 +187,6 @@
     width: 100%
     color: $resumeDark
     background-color: $resumeLight
-    // border:
-    //   left: solid $resumeDark 1px
-    //   right: solid $resumeDark 1px
-    //   bottom: solid $resumeDark 1px
   .template__website
     text-align: center
     margin-bottom: 0.2cm

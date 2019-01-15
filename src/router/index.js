@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Header from '@/components/Header'
-import TemplateA from '@/components/templates/TemplateA'
+import HeaderFactory from '@/pages/HeaderFactory'
 
 Vue.use(Router)
 
@@ -14,14 +13,9 @@ export default new Router({
             component: Home
         },
         {
-            path: '/template-a',
-            name: 'template-a',
-            component: TemplateA
-        },
-        {
-            path: '/header',
-            name: 'header',
-            component: Header
+            path: '/header-factory',
+            name: 'header-factory',
+            component: HeaderFactory
         }
     ]
 })

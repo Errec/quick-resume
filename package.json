@@ -13,7 +13,8 @@
   "dependencies": {
     "sass-resources-loader": "^1.3.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -74,5 +75,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Errec/quick-resume.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Errec/quick-resume/issues"
+  },
+  "homepage": "https://github.com/Errec/quick-resume#readme"
 }

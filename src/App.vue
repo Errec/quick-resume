@@ -1,9 +1,17 @@
 <template lang="pug">
   div#app
+    app-header
     router-view
 </template>
 
 <script>
+  import AppHeader from '@/components/AppHeader'
+  export default {
+    name: 'home',
+    components: {
+      AppHeader
+    }
+  }
 </script>
 
 <style lang="sass">

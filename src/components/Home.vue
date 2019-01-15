@@ -1,6 +1,5 @@
 <template lang="pug">
   div.home
-    //- router-link(to="template-a")
     router-link(to="header-factory")
       button.home__btn-next Next
 </template>

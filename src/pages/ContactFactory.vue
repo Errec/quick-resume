@@ -29,10 +29,10 @@
       )
       v-text-field(
           label="Phone"
-          :value="currentValue" 
           return-masked-value
           mask="###-#########"
-          @input="handleInput"
+          v-model="phoneNumber"
+
       )
       
 
@@ -54,7 +54,8 @@ export default {
       lastName: '',
       lastNameErr: 'Last Name',
       email: '',
-      emailErr: 'E-mail'
+      emailErr: 'E-mail',
+      phoneNumber: ''
     }
   },
   computed: {

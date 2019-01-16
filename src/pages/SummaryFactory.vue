@@ -15,7 +15,7 @@
     )
     //- v-btn(@click="submit") submit
     v-btn(to="address-factory") back
-    v-btn(to="") next
+    v-btn(to="skill-factory") next
     v-btn.right(@click="clear") clear
 </template>
 

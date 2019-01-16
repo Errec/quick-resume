@@ -23,7 +23,7 @@
       )
       v-text-field(
         v-validate="'required|address'"
-        v-model="address"
+        v-model="addressLine"
         :error-messages="errors.collect(addressLineErr)"
         label="Address Line"
         :data-vv-name="addressLineErr"
@@ -47,7 +47,7 @@ export default {
       countryErr: 'Country',
       city: '',
       cityErr: 'City',
-      adressLine: '',
+      addressLine: '',
       addressLineErr: 'Address Line'
     }
   },

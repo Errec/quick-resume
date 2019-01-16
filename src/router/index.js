@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import ContactFactory from '@/pages/ContactFactory'
 import AddressFactory from '@/pages/AddressFactory'
 import SummaryFactory from '@/pages/SummaryFactory'
+import SkillFactory from '@/pages/SkillFactory'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/summary-factory',
       name: 'summary-factory',
       component: SummaryFactory
+    },
+    {
+      path: '/skill-factory',
+      name: 'skill-factory',
+      component: SkillFactory
     }
   ]
 })

@@ -1,7 +1,6 @@
 <template lang="pug">
   div.home
-    router-link(to="header-factory")
-      button.home__btn-next Next
+    v-btn(to="contact-factory") Login
 </template>
 
 <script>  

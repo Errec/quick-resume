@@ -2,7 +2,7 @@
   div.summary-factory
     v-textarea(
       outline
-      v-validate="'required|max:10'"
+      v-validate="'required|max:200'"
       :error-messages="errors.collect(summaryErr)"
       :data-vv-name="summaryErr"
       required

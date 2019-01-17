@@ -2,7 +2,7 @@
   v-toolbar.mb-4(
     color="indigo"
     dark)
-    h1 Quick Resume
+    h1 A4 Resume
 </template>
 
 <script>

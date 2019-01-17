@@ -6,6 +6,7 @@ import AddressFactory from '@/pages/AddressFactory'
 import SummaryFactory from '@/pages/SummaryFactory'
 import SkillFactory from '@/pages/SkillFactory'
 import WorkHistoryFactory from '@/pages/WorkHistoryFactory'
+import EducationFactory from '@/pages/EducationFactory'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/work-history-factory',
       name: 'work-history-factory',
       component: WorkHistoryFactory
+    },
+    {
+      path: '/education-factory',
+      name: 'education-factory',
+      component: EducationFactory
     }
   ]
 })

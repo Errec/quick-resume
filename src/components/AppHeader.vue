@@ -1,5 +1,8 @@
 <template lang="pug">
-  h1 header
+  v-toolbar.mb-4(
+    color="indigo"
+    dark)
+    h1 Quick Resume
 </template>
 
 <script>

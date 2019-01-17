@@ -3,7 +3,7 @@
     v-form
       v-autocomplete(
         v-model="country"
-        v-validate="'required|country'"
+        v-validate="'required'"
         :error-messages="errors.collect(countryErr)"
         :data-vv-name="countryErr"
         :items="['Brazil','United States','Ireland','Uruguay','Netherlands','France']"
@@ -13,7 +13,7 @@
       )
       v-autocomplete(
         v-model="city"
-        v-validate="'required|city'"
+        v-validate="'required'"
         :error-messages="errors.collect(cityErr)"
         :data-vv-name="cityErr"
         :items="['Belo Horizonte','Orlando','Dublin','Montevideo','Amsterdam','Paris']"

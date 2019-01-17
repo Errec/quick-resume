@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app.pa-5#app
+  v-app.px-5.pt-3#app
     app-header
     router-view
 </template>

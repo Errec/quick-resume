@@ -5,6 +5,7 @@ import ContactFactory from '@/pages/ContactFactory'
 import AddressFactory from '@/pages/AddressFactory'
 import SummaryFactory from '@/pages/SummaryFactory'
 import SkillFactory from '@/pages/SkillFactory'
+import WorkHistoryFactory from '@/pages/WorkHistoryFactory'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/skill-factory',
       name: 'skill-factory',
       component: SkillFactory
+    },
+    {
+      path: '/work-history-factory',
+      name: 'work-history-factory',
+      component: WorkHistoryFactory
     }
   ]
 })

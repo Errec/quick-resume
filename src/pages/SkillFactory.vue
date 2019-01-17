@@ -38,6 +38,18 @@
         label="Skill 6"
         clearable
     )
+      v-text-field(
+        v-model="skill_7"
+        solo
+        label="Skill 7"
+        clearable
+    )
+      v-text-field(
+        v-model="skill_8"
+        solo
+        label="Skill 8"
+        clearable
+    )
 
     //- v-btn(@click="submit") submit
     v-btn(to="summary-factory") back
@@ -58,7 +70,9 @@ export default {
       skill_3: '',
       skill_4: '',
       skill_5: '',
-      skill_6: ''
+      skill_6: '',
+      skill_7: '',
+      skill_8: ''
     }
   },
   methods: {
@@ -72,6 +86,8 @@ export default {
       this.skill_4 = '',
       this.skill_5 = '',
       this.skill_6 = '',
+      this.skill_7 = '',
+      this.skill_8 = '',
       this.$validator.reset()
     }
   }

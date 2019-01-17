@@ -1,68 +1,130 @@
 <template lang="pug">
   div.work-history-factory
     v-form
-      v-text-field(
-        outline
-        v-validate="'required|max:20'"
-        v-model="companyName"
-        :counter="20"
-        :error-messages="errors.collect(companyNameErr)"
-        label="Company Name"
-        :data-vv-name="companyNameErr"
-        required)
+      v-card.mb-5.px-4(color="grey lighten-4")
+        v-card-title(prunart-title)
+          div
+            span.headline Job Experience
+            span.ml-2.right 1/3
+        v-text-field(
+          outline
+          v-validate="'required|max:20'"
+          :error-messages="errors.collect(companyNameErr)"
+          :data-vv-name="companyNameErr"
+          :counter="20"
+          v-model="companyName"
+          label="Company Name"
+          required)
 
-      v-text-field(
-        outline
-        v-validate="'required|max:20'"
-        v-model="jobTitle"
-        :counter="20"
-        :error-messages="errors.collect(jobTitleErr)"
-        label="Job Title"
-        :data-vv-name="jobTitleErr"
-        required)
+        v-text-field(
+          outline
+          v-validate="'required|max:20'"
+          v-model="jobTitle"
+          :counter="20"
+          :error-messages="errors.collect(jobTitleErr)"
+          label="Job Title"
+          :data-vv-name="jobTitleErr"
+          required)
 
-      v-menu(
-        ref='menu'
-        :close-on-content-click='false'
-        v-model='menu'
-        :nudge-right='40'
-        :return-value.sync='dates'
-        lazy
-        transition='scale-transition'
-        offset-y
-        full-width
-        min-width='290px')
-        
-        v-combobox(
-          slot='activator'
-          v-model='dates'
-          multiple
-          chips
-          small-chips
-          label='Start and End dates'
-          prepend-icon='event'
-          readonly
-          clearable)
-        
-        v-date-picker(
-          v-model='dates'
-          multiple
-          no-title
-          scrollable
-          type="month")
+        v-menu(
+          ref='menu'
+          :close-on-content-click='false'
+          v-model='menu'
+          :nudge-right='40'
+          :return-value.sync='dates'
+          lazy
+          transition='scale-transition'
+          offset-y
+          full-width
+          min-width='290px')
           
-          v-spacer
+          v-combobox(
+            v-validate="'required'"
+            :error-messages="errors.collect(dateErr)"
+            :data-vv-name="dateErr"
+            slot='activator'
+            v-model='dates'
+            multiple
+            outline
+            chips
+            small-chips
+            label='Start and End dates'
+            prepend-icon='event'
+            readonly
+            required
+            clearable)
           
-          v-btn(
-            flat
-            color='primary'
-            @click='menu = false') Cancel
-          
-          v-btn(
-            flat
-            color='primary'
-            @click='$refs.menu.save(dates)') OK
+          v-date-picker(
+            v-model='dates'
+            multiple
+            no-title
+            scrollable
+            type="month")
+            
+            v-spacer
+            
+            v-btn(
+              flat
+              color='primary'
+              @click='menu = false') Cancel
+            v-btn(
+              flat
+              color='primary'
+              @click='$refs.menu.save(dates)') OK
 
+        v-divider.mb-4(color="grey")
+
+        v-textarea(
+          persist-hint
+          no-resize
+          v-validate="'max:100'"
+          :error-messages="errors.collect(descriptionErr1)"
+          :data-vv-name="descriptionErr1"
+          :counter="100"
+          v-model="description_1"
+          solo
+          label="Description 1"
+          clearable
+        )
+
+        v-textarea(
+          persistent-hint
+          no-resize
+          v-validate="'max:100'"
+          :error-messages="errors.collect(descriptionErr2)"
+          :data-vv-name="descriptionErr2"
+          :counter="100"
+          v-model="description_2"
+          solo
+          label="Description 2"
+          clearable
+        )
+
+        v-textarea(
+          persistent-hint
+          no-resize
+          v-validate="'max:100'"
+          :error-messages="errors.collect(descriptionErr3)"
+          :data-vv-name="descriptionErr3"
+          :counter="100"
+          v-model="description_3"
+          solo
+          label="Description 3"
+          clearable
+        )
+
+        v-textarea(
+          persistent-hint
+          no-resize
+          v-validate="'max:100'"
+          :error-messages="errors.collect(descriptionErr4)"
+          :data-vv-name="descriptionErr4"
+          :counter="100"
+          v-model="description_4"
+          solo
+          label="Description 4"
+          clearable
+        )
     //- v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
@@ -82,7 +144,16 @@ export default {
       companyNameErr: 'Company Name',
       jobTitleErr: 'Job Title',
       dates: [],
-      menu: false
+      dateErr: 'Date',
+      menu: false,
+      description_1: '',
+      descriptionErr1: 'Description 1',
+      description_2: '',
+      descriptionErr2: 'Description 2',
+      description_3: '',
+      descriptionErr3: 'Description 3',
+      description_4: '',
+      descriptionErr4: 'Description 4'
     }
   },
   methods: {

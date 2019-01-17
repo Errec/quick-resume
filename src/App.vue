@@ -1,7 +1,7 @@
 <template lang="pug">
-  v-app.px-5.pt-3#app
+  v-app#app
     app-header
-    router-view
+    router-view.px-5.pb-3
 </template>
 
 <script>

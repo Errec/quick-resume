@@ -1,11 +1,24 @@
 export default {
-  getPersonalInfo(state) {
-    const personalInfo = {
-      name: state.name,
-      address: state.address,
-      phone: state.phone,
-      email: state.email
+  getContactInfo(state) {
+    const contactInfo = {
+      firstName: state.name.firstName,
+      lastName: state.name.lastName,
+      phoneNumber: state.phoneNumber,
+      email: state.email,
+      website: state.website
     }
-    return personalInfo
+    return contactInfo
+  },
+  getAddressInfo(state) {
+    const addressInfo = {
+      country: state.address.country,
+      city: state.address.city,
+      state: state.address.state,
+      addressLine: state.address.addressLine
+    }
+    return addressInfo
+  },
+  getSummary(state) {
+    return state.summary
   }
 }

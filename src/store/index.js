@@ -10,21 +10,18 @@ export default new Vuex.Store({
   state: {
     id: '',
     name: {
-      first: 'Raniro',
-      last: 'Coelho'
+      firstName: 'Raniro',
+      lastName: 'Coelho'
     },
-    address: {
-      city: 'Belo Horizonte',
-      state: 'MG',
-      street: 'Aimores',
-      number: '615',
-      complement: '1402',
-      country: 'Brazil',
-      zip: '30140-070'
-    },
-    phone: '+55-31-994079886',
+    phoneNumber: '+55-31-994079886',
     email: 'ranirocoelho@gmail.com',
     website: 'wwww.errec.surge.sh',
+    address: {
+      addressLine: '615 Aimores,CEP 30140-070',
+      country: 'Brazil',
+      state: 'MG',
+      city: 'Belo Horizonte'
+    },
     summary: 'Prolific, web-based Front-end developer working on new and live micro-sites, landing pages, and templates. Executed and contributed to full-stack web development projects, with an emphasis on front-end features, browser manipulation, and cross-browser compatibility. Great English communication skills.',
     keySkills: [{
       skill_1: 'Javascript'

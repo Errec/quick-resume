@@ -51,6 +51,13 @@ export default {
       addressLineErr: 'Address Line'
     }
   },
+  mounted() {
+    const addressInfo = this.$store.getters.getAddressInfo
+
+    this.country = addressInfo.country
+    this.city = addressInfo.city
+    this.addressLine = addressInfo.addressLine
+  },
   methods: {
     submit () {
       this.$validator.validateAll()

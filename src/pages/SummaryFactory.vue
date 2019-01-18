@@ -31,6 +31,9 @@ export default {
       summaryErr: 'Summary'
     }
   },
+  mounted() {
+    this.summary  = this.$store.getters.getSummary
+  },
   methods: {
     submit () {
       this.$validator.validateAll()

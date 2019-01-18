@@ -28,10 +28,9 @@
         required
       )
       v-text-field(
-          label="Phone"
-          return-masked-value
-          mask="###-#########"
-          v-model="phoneNumber"
+        label="Phone"
+        type="text"
+        v-model="phoneNumber"
 
       )
       
@@ -58,10 +57,13 @@ export default {
       phoneNumber: ''
     }
   },
-  computed: {
-    personalInfo () {
-      return this.$store.getters.getPersonalInfo
-    }
+  mounted() {
+    const personalInfo = this.$store.getters.getContactInfo
+    
+    this.firstName = personalInfo.firstName
+    this.lastName = personalInfo.lastName
+    this.email = personalInfo.email
+    this.phoneNumber = personalInfo.phoneNumber
   },
   methods: {
     submit () {

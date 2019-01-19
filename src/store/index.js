@@ -23,65 +23,40 @@ export default new Vuex.Store({
       city: 'Belo Horizonte'
     },
     summary: 'Prolific, web-based Front-end developer working on new and live micro-sites, landing pages, and templates. Executed and contributed to full-stack web development projects, with an emphasis on front-end features, browser manipulation, and cross-browser compatibility. Great English communication skills.',
-    keySkills: [{
-      skill_1: 'Javascript'
-    }, {
-      skill_2: 'HTML/PUG'
-    }, {
-      skill_3: 'CSS/SASS'
-    }, {
-      skill_4: 'Git'
-    }, {
-      skill_5: 'Vue/React'
-    }, {
-      skill_6: 'Gulp/Webpack'
-    }, {
-      skill_7: 'Photoshop/Illustrator'
-    }, {
-      skill_8: 'Linux/CLI'
-    }],
+    keySkills: ['Javascript', 'HTML/PUG', 'CSS/SASS', 'Git', 'Vue/React', 'Gulp/Webpack', 'Photoshop/Illustrator', 'Linux/CLI'],
     workStory: [{
       companyName: 'Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       startDate: 'Feb.2015',
       endDate: 'Present',
-      descriptions: [{
-        description_1: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_2: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_3: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_4: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }]
+      descriptions: [
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ]
     }, {
       companyName: 'Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       startDate: 'Feb.2015',
       endDate: 'Present',
-      descriptions: [{
-        description_1: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_2: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_3: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_4: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }]
+      descriptions: [
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ]
     }, {
       companyName: 'Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       startDate: 'Feb.2015',
       endDate: 'Present',
-      descriptions: [{
-        description_1: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_2: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_3: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }, {
-        description_4: 'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
-      }]
+      descriptions: [
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ]
     }],
     education: [{
       institutionName: 'Federal University of Minas Gerais',

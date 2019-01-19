@@ -20,5 +20,8 @@ export default {
   },
   getSummary(state) {
     return state.summary
+  },
+  getKeySkills(state) {
+    return state.keySkills
   }
 }

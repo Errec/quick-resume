@@ -87,44 +87,6 @@
           clearable
         )
 
-        v-textarea(
-          persistent-hint
-          no-resize
-          v-validate="'max:100'"
-          :error-messages="errors.collect(descriptionErr2)"
-          :data-vv-name="descriptionErr2"
-          :counter="100"
-          v-model="description_2"
-          solo
-          label="Description 2"
-          clearable
-        )
-
-        v-textarea(
-          persistent-hint
-          no-resize
-          v-validate="'max:100'"
-          :error-messages="errors.collect(descriptionErr3)"
-          :data-vv-name="descriptionErr3"
-          :counter="100"
-          v-model="description_3"
-          solo
-          label="Description 3"
-          clearable
-        )
-
-        v-textarea(
-          persistent-hint
-          no-resize
-          v-validate="'max:100'"
-          :error-messages="errors.collect(descriptionErr4)"
-          :data-vv-name="descriptionErr4"
-          :counter="100"
-          v-model="description_4"
-          solo
-          label="Description 4"
-          clearable
-        )
     //- v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
@@ -147,13 +109,7 @@ export default {
       dateErr: 'Date',
       menu: false,
       description_1: '',
-      descriptionErr1: 'Description 1',
-      description_2: '',
-      descriptionErr2: 'Description 2',
-      description_3: '',
-      descriptionErr3: 'Description 3',
-      description_4: '',
-      descriptionErr4: 'Description 4'
+      descriptionErr1: 'Description 1'
     }
   },
   methods: {

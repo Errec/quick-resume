@@ -23,5 +23,8 @@ export default {
   },
   getKeySkills(state) {
     return state.keySkills
+  },
+  getWorkHistory(state) {
+    return state.workHistory
   }
 }

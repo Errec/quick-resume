@@ -1,37 +1,37 @@
 <template lang="pug">
   div.work-history-factory
-    v-form
+    v-form(v-for="(company, index) in companies")
       v-card.mb-5.px-4(color="grey lighten-4")
         v-card-title(prunart-title)
           div
             span.headline Job Experience
-            span.ml-2.right 1/3
+            span.ml-2.right {{index + 1}}/3
         v-text-field(
           outline
           v-validate="'required|max:20'"
-          :error-messages="errors.collect(companyNameErr)"
-          :data-vv-name="companyNameErr"
+          :error-messages="errors.collect(company.companyNameErr)"
+          :data-vv-name="company.companyNameErr"
           :counter="20"
-          v-model="companyName"
+          v-model="company.companyName"
           label="Company Name"
           required)
 
         v-text-field(
           outline
           v-validate="'required|max:20'"
-          v-model="jobTitle"
+          v-model="company.jobTitle"
           :counter="20"
-          :error-messages="errors.collect(jobTitleErr)"
+          :error-messages="errors.collect(company.jobTitleErr)"
           label="Job Title"
-          :data-vv-name="jobTitleErr"
+          :data-vv-name="company.jobTitleErr"
           required)
 
         v-menu(
-          ref='menu'
+          ref='company.menu'
           :close-on-content-click='false'
-          v-model='menu'
+          v-model='company.menu'
           :nudge-right='40'
-          :return-value.sync='dates'
+          :return-value.sync='company.dates'
           lazy
           transition='scale-transition'
           offset-y
@@ -40,10 +40,10 @@
           
           v-combobox(
             v-validate="'required'"
-            :error-messages="errors.collect(dateErr)"
-            :data-vv-name="dateErr"
+            :error-messages="errors.collect(company.dateErr)"
+            :data-vv-name="company.dateErr"
             slot='activator'
-            v-model='dates'
+            v-model='company.dates'
             multiple
             outline
             chips
@@ -55,7 +55,7 @@
             clearable)
           
           v-date-picker(
-            v-model='dates'
+            v-model='company.dates'
             multiple
             no-title
             scrollable
@@ -66,28 +66,28 @@
             v-btn(
               flat
               color='primary'
-              @click='menu = false') Cancel
+              @click='company.menu = false') Cancel
             v-btn(
               flat
               color='primary'
-              @click='$refs.menu.save(dates)') OK
+              @click='$refs.menu.save(company.dates)') OK
 
         v-divider.mb-4(color="grey")
 
         v-textarea(
-          persist-hint
+          v-for=("(description, index) in company.descriptions")
           no-resize
           v-validate="'max:100'"
-          :error-messages="errors.collect(descriptionErr1)"
-          :data-vv-name="descriptionErr1"
+          :error-messages="errors.collect(description.descriptionErr)"
+          :data-vv-name="description.descriptionErr"
           :counter="100"
-          v-model="description_1"
+          v-model="description.text"
           solo
-          label="Description 1"
+          label="Job description"
           clearable
         )
 
-    //- v-btn(@click="submit") submit
+    v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
     v-btn.right(@click="clear") clear
@@ -101,16 +101,23 @@ export default {
   },
   data () {
     return {
+      companies: [{
       companyName: '',
       jobTitle: '',
-      companyNameErr: 'Company Name',
       jobTitleErr: 'Job Title',
       dates: [],
-      dateErr: 'Date',
       menu: false,
-      description_1: '',
-      descriptionErr1: 'Description 1'
+      descriptions: [{
+        text: '',
+        descriptionErr: 'Description'
+      }],
+      companyNameErr: 'Company Name',
+      dateErr: 'Date'
+    }]
     }
+  },
+  mounted () {
+    this.companies = this.$store.getters.getWorkHistory
   },
   methods: {
     submit () {

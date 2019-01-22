@@ -130,8 +130,8 @@ export default {
     }
   },
   watch: {
-    dates (val) {
-      if (val.length > 2) {
+    companies (company) {
+      if (company.dates.length > 2) {
         this.$nextTick(() => this.dates.pop())
       }
     }

@@ -2,6 +2,7 @@
   div.additional-experience-factory
     v-textarea(
       outline
+      solo
       v-validate="'max:200'"
       :error-messages="errors.collect(additionalExperienceErr)"
       :data-vv-name="additionalExperienceErr"
@@ -29,6 +30,9 @@ export default {
       additionalExperience: '',
       additionalExperienceErr: 'Additional Experience'
     }
+  },
+  mounted() {
+    this.additionalExperience  = this.$store.getters.getAdditionalExperience
   },
   methods: {
     submit () {

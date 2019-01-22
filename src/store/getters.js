@@ -26,5 +26,8 @@ export default {
   },
   getWorkHistory(state) {
     return state.workHistory
+  },
+  getAdditionalExperience(state) {
+    return state.additionalExperience
   }
 }

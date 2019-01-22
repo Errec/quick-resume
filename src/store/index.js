@@ -27,7 +27,7 @@ export default new Vuex.Store({
     workHistory: [{
       companyName: '1Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
-      dates: ['Feb.2015', 'Present'],
+      dates: ['Feb.2012', 'Present'],
       descriptions: [{
         text: 'a11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
         descriptionErr: 'Description'
@@ -69,7 +69,7 @@ export default new Vuex.Store({
     }, {
       companyName: '3Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
-      dates: ['Feb.2015', 'Present'],
+      dates: ['Feb.2017', 'Jul.2018'],
       descriptions: [{
         text: 'c11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
         descriptionErr: 'Description'

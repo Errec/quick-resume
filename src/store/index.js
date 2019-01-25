@@ -28,19 +28,12 @@ export default new Vuex.Store({
       companyName: '1Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       dates: ['Feb.2012', 'Present'],
-      descriptions: [{
-        text: 'a11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'a12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'a13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'a14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }],
+      descriptions: [
+        'za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'za12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'za13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ],
       companyNameErr: 'Company Name',
       jobTitleErr: 'Job Title',
       dateErr: 'Date',
@@ -49,19 +42,12 @@ export default new Vuex.Store({
       companyName: '2Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       dates: ['Feb.2015', 'Present'],
-      descriptions: [{
-        text: 'b11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'b12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'b13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'b14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }],
+      descriptions: [
+        'xa11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'xa12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'xa13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'xa14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ],
       companyNameErr: 'Company Name',
       jobTitleErr: 'Job Title',
       dateErr: 'Date',
@@ -70,19 +56,12 @@ export default new Vuex.Store({
       companyName: '3Freelancer-Brazil/Ireland',
       jobTitle: 'Front-end Developer',
       dates: ['Feb.2017', 'Jul.2018'],
-      descriptions: [{
-        text: 'c11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'c12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'c13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }, {
-        text: 'c14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
-        descriptionErr: 'Description'
-      }],
+      descriptions: [
+        'ca11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'ca12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'ca13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.',
+        'ca14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.'
+      ],
       companyNameErr: 'Company Name',
       jobTitleErr: 'Job Title',
       dateErr: 'Date',

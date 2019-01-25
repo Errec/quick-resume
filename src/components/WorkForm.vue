@@ -74,26 +74,18 @@
             @click='$refs.menu.save(dates)') OK
 
       v-divider.mb-4(color="grey")
-
-      v-textarea(
-        v-for=("(description, index) in descriptions")
-        no-resize
-        v-validate="'max:100'"
-        :error-messages="errors.collect(description.descriptionErr)"
-        :data-vv-name="description.descriptionErr"
-        :counter="100"
-        v-model="description.text"
-        solo
-        label="Job description"
-        clearable
-      )
+      work-description(v-for="(description, index) in jobInfo.descriptions" :descriptionText='description')
 
 </template>
 
 <script>
+import WorkDescription from './WorkDescription'
 export default {
   name: "work-form",
   props: ['jobInfo'],
+  components: {
+    WorkDescription
+  },
   $_veeValidate: {
     validator: 'new'
   },
@@ -104,18 +96,16 @@ export default {
       jobTitleErr: 'Job Title',
       dates: [],
       menu: false,
-      descriptions: [{
-        text: '',
-        descriptionErr: 'Description'
-      }],
       companyNameErr: 'Company Name',
-      dateErr: 'Date'
+      dateErr: 'Date',
+      descriptions: []
     }
   },
   mounted () {
     this.companyName = this.jobInfo.companyName
     this.jobTitle = this.jobInfo.jobTitle
     this.dates = this.jobInfo.dates
+    this.descriptions = this.jobInfo.descriptions
   },
   methods: {
     submit () {

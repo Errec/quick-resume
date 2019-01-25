@@ -5,34 +5,34 @@
       v-btn.right(@click="clear") clear
       v-card-title(prunart-title)
         div
-          span.headline Job Experience
-          //- span.ml-2.right {{index + 1}}/3
+          span.headline {{infos.title}}
+          span.ml-2.right {{index + 1}}/3
       v-text-field(
         outline
         v-validate="'required|max:20'"
-        :error-messages="errors.collect(companyNameErr)"
-        :data-vv-name="companyNameErr"
+        :error-messages="errors.collect(infos.instituteLabel)"
+        :data-vv-name="infos.instituteLabel"
         :counter="20"
-        v-model="companyName"
-        label="Company Name"
+        v-model="infos.instituteName"
+        :label="infos.instituteLabel"
         required)
 
       v-text-field(
         outline
         v-validate="'required|max:20'"
-        v-model="jobTitle"
+        v-model="infos.positionTitle"
         :counter="20"
-        :error-messages="errors.collect(jobTitleErr)"
-        label="Job Title"
-        :data-vv-name="jobTitleErr"
+        :error-messages="errors.collect(infos.positionTitleLabel)"
+        :label="infos.positionTitleLabel"
+        :data-vv-name="infos.positionTitleLabel"
         required)
 
       v-menu(
-        ref='menu'
+        ref='infos.menu'
         :close-on-content-click='false'
-        v-model='menu'
+        v-model='infos.menu'
         :nudge-right='40'
-        :return-value.sync='dates'
+        :return-value.sync='infos.dates'
         lazy
         transition='scale-transition'
         offset-y
@@ -44,7 +44,7 @@
           :error-messages="errors.collect(dateErr)"
           :data-vv-name="dateErr"
           slot='activator'
-          v-model='dates'
+          v-model='infos.dates'
           multiple
           outline
           chips
@@ -56,7 +56,7 @@
           clearable)
 
         v-date-picker(
-          v-model='dates'
+          v-model='infos.dates'
           multiple
           no-title
           scrollable
@@ -74,53 +74,50 @@
             @click='$refs.menu.save(dates)') OK
 
       v-divider.mb-4(color="grey")
-      work-description(v-for="(description, index) in jobInfo.descriptions" :descriptionText='description')
+      description(v-for="(description, index) in formInfos.descriptions" :descriptionText='description')
 
 </template>
 
 <script>
-import WorkDescription from './WorkDescription'
+import Description from './Description'
 export default {
   name: "work-form",
-  props: ['jobInfo'],
+  props: ['formInfos', 'index'],
   components: {
-    WorkDescription
+    Description
   },
   $_veeValidate: {
     validator: 'new'
   },
   data () {
-    return {
-      companyName: '',
-      jobTitle: '',
-      jobTitleErr: 'Job Title',
-      dates: [],
-      menu: false,
-      companyNameErr: 'Company Name',
-      dateErr: 'Date',
-      descriptions: []
+    return { 
+      infos: {
+        instituteName: '',
+        positionTitle: '',
+        dates: [],
+        descriptions: [],
+        instituteLabel: '',
+        positionTitleLabel: ''
+      },
+        menu: false,
+        dateErr: 'Date'
     }
   },
-  mounted () {
-    this.companyName = this.jobInfo.companyName
-    this.jobTitle = this.jobInfo.jobTitle
-    this.dates = this.jobInfo.dates
-    this.descriptions = this.jobInfo.descriptions
+  beforeMount () {
+    this.infos = this.formInfos
   },
   methods: {
     submit () {
       this.$validator.validateAll()
     },
     clear () {
-      this.companyName = ''
-      this.jobTitle = ''
-      this.$validator.reset()
+      this.$validator.reset() //TODO
     }
   },
   watch: {
     dates (val) {
-      if (this.dates.length > 2) {
-        this.$nextTick(() => this.dates.pop())
+      if (this.infos.dates.length > 2) {
+        this.$nextTick(() => this.infos.dates.pop())
       }
     }
   }

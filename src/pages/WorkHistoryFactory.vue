@@ -1,14 +1,14 @@
 <template lang="pug">
   div.work-history-factory
     h1 Work History
-    work-form(v-for="(company, index) in companies" :jobInfo='company')
+    info-form(v-for="(company, index) in companies" :formInfos='company' :index='index')
     //- v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
 </template>
 
 <script>
-import WorkForm from '@/components/WorkForm'
+import InfoForm from '@/components/InfoForm'
 export default {
   name: "work-history-factory",
   data() {
@@ -17,7 +17,7 @@ export default {
     }
   },
   components: {
-    WorkForm
+    InfoForm
   },
   mounted () {
     this.companies = this.$store.getters.getWorkHistory

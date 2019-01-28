@@ -28,9 +28,9 @@
         required)
 
       v-menu(
-        ref='infos.menu'
+        ref='menu'
         :close-on-content-click='false'
-        v-model='infos.menu'
+        v-model='menu'
         :nudge-right='40'
         :return-value.sync='infos.dates'
         lazy
@@ -71,7 +71,7 @@
           v-btn(
             flat
             color='primary'
-            @click='$refs.menu.save(dates)') OK
+            @click='$refs.menu.save(infos.dates)') OK
 
       v-divider.mb-4(color="grey")
       description(v-for="(description, index) in formInfos.descriptions" :descriptionText='description')

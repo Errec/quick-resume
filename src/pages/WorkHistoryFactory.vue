@@ -1,8 +1,8 @@
 <template lang="pug">
   div.work-history-factory
     h1 Work History
-    info-form(v-for="(company, index) in companies" :formInfos='company' :index='index')
-    //- v-btn(@click="submit") submit
+    info-form(ref="profile" v-for="(company, index) in companies" :formInfos='company' :index='index')
+    v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
 </template>
@@ -14,6 +14,13 @@ export default {
   data() {
     return {
       companies: []
+    }
+  },
+  methods: {
+    submit () {
+      this.$refs.profile.forEach( (child) => {
+        child.submit()
+      } )
     }
   },
   components: {

@@ -9,10 +9,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     id: "",
+
     name: {
       firstName: "Raniro",
       lastName: "Coelho"
     },
+
     phoneNumber: "+55-31-994079886",
     email: "ranirocoelho@gmail.com",
     website: "wwww.errec.surge.sh",
@@ -22,8 +24,10 @@ export default new Vuex.Store({
       state: "MG",
       city: "Belo Horizonte"
     },
+
     summary:
       "Prolific, web-based Front-end developer working on new and live micro-sites, landing pages, and templates. Executed and contributed to full-stack web development projects, with an emphasis on front-end features, browser manipulation, and cross-browser compatibility. Great English communication skills.",
+
     keySkills: [
       "Javascript",
       "HTML/PUG",
@@ -34,6 +38,7 @@ export default new Vuex.Store({
       "Photoshop/Illustrator",
       "Linux/CLI"
     ],
+
     workHistory: {
       labels: {
         title: "Job Experience",
@@ -53,36 +58,28 @@ export default new Vuex.Store({
         ]
       }]
     },
-    education: [
-      {
+
+    education:
+    {
+      labels: {
         title: "Education",
-        institutionName: "Federal University of Minas Gerais",
-        gradDegree: "Bachelors of Mechanical Engineering",
-        startDate: "Feb.2002",
-        endDate: "Feb.2003",
-        description:
-          "Currently studying the Front-end Developer path on Europe's largest online education platform."
+        instituteLabel: "Institution Name",
+        positionTitleLabel: "Graduation Degree",
+        descriptionLabel: 'Activities Description'
       },
-      {
-        institutionName: "Federal University of Minas Gerais",
-        gradDegree: "Bachelors of Mechanical Engineering",
-        startDate: "Feb.2002",
-        endDate: "Feb.2003",
-        description:
-          "Currently studying the Front-end Developer path on Europe's largest online education platform."
-      },
-      {
-        institutionName: "Federal University of Minas Gerais",
-        gradDegree: "Bachelors of Mechanical Engineering",
-        startDate: "Feb.2002",
-        endDate: "Feb.2003",
-        description:
-          "Currently studying the Front-end Developer path on Europe's largest online education platform."
-      }
-    ],
+      data: [{
+        instituteName: "Federal University of Minas Gerais",
+        positionTitle: "Bachelors of Mechanical Engineering",
+        date: ["Feb.2002", "Feb.2003"],
+        descriptions:
+          ["Currently studying the Front-end Developer path on Europe's largest online education platform."]
+      }]
+    },
+
     additionalExperience:
       "I work as a photographer in my spare time. Also, as a lover of the seventh art, I'm always going to the movies and film festivals."
   },
+
   actions: actions,
   mutations: mutations,
   getters: getters

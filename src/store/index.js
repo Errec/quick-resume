@@ -34,13 +34,16 @@ export default new Vuex.Store({
       "Photoshop/Illustrator",
       "Linux/CLI"
     ],
-    workHistory: [
-      {
+    workHistory: {
+      labels: {
         title: "Job Experience",
-        instituteName: "1Freelancer-Brazil/Ireland",
         instituteLabel: "Company Name",
-        positionTitle: "Front-end Developer",
         positionTitleLabel: "Job Title",
+        descriptionLabel: 'Job Description'
+      },
+      data: [{
+        instituteName: "1Freelancer-Brazil/Ireland",
+        positionTitle: "Front-end Developer",
         dates: ["Feb.2012", "Present"],
         descriptions: [
           "za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
@@ -48,39 +51,11 @@ export default new Vuex.Store({
           "za13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
           "za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
         ]
-      },
-      {
-        title: "Job Experience",
-        instituteName: "2Freelancer-Brazil/Ireland",
-        instituteLabel: "Company Name",
-        positionTitle: "Front-end Developer",
-        positionTitleLabel: "Job Title",
-        dates: ["Feb.2012", "Present"],
-        descriptionLabel: 'Job Description',
-        descriptions: [
-          "xa11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "xa12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "xa13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "xa14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
-        ]
-      },
-      {
-        title: "Job Experience",
-        instituteName: "3Freelancer-Brazil/Ireland",
-        instituteLabel: "Company Name",
-        positionTitle: "Front-end Developer",
-        positionTitleLabel: "Job Title",
-        dates: ["Feb.2012", "Present"],
-        descriptions: [
-          "ca11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "ca12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "ca13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "ca14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
-        ]
-      }
-    ],
+      }]
+    },
     education: [
       {
+        title: "Education",
         institutionName: "Federal University of Minas Gerais",
         gradDegree: "Bachelors of Mechanical Engineering",
         startDate: "Feb.2002",

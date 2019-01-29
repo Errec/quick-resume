@@ -10,21 +10,21 @@
       v-text-field(
         outline
         v-validate="'required|max:20'"
-        :error-messages="errors.collect(infos.instituteLabel)"
-        :data-vv-name="infos.instituteLabel"
+        :error-messages="errors.collect(infos.labels.instituteLabel)"
+        :data-vv-name="infos.labels.instituteLabel"
         :counter="20"
-        v-model="infos.instituteName"
-        :label="infos.instituteLabel"
+        v-model="infos.data.instituteName"
+        :label="infos.labels.instituteLabel"
         required)
 
       v-text-field(
         outline
         v-validate="'required|max:20'"
-        v-model="infos.positionTitle"
+        v-model="infos.data.positionTitle"
         :counter="20"
-        :error-messages="errors.collect(infos.positionTitleLabel)"
-        :label="infos.positionTitleLabel"
-        :data-vv-name="infos.positionTitleLabel"
+        :error-messages="errors.collect(infos.labels.positionTitleLabel)"
+        :label="infos.labels.positionTitleLabel"
+        :data-vv-name="infos.labels.positionTitleLabel"
         required)
 
       v-menu(
@@ -44,7 +44,7 @@
           :error-messages="errors.collect(dateErr)"
           :data-vv-name="dateErr"
           slot='activator'
-          v-model='infos.dates'
+          v-model='infos.data.dates'
           multiple
           outline
           chips
@@ -56,7 +56,7 @@
           clearable)
 
         v-date-picker(
-          v-model='infos.dates'
+          v-model='infos.data.dates'
           multiple
           no-title
           scrollable
@@ -71,10 +71,10 @@
           v-btn(
             flat
             color='primary'
-            @click='$refs.menu.save(infos.dates)') OK
+            @click='$refs.menu.save(infos.data.dates)') OK
 
       v-divider.mb-4(color="grey")
-      description(v-for="(description, index) in formInfos.descriptions" :descriptionText='description')
+      description(v-for="(description, index) in infos.data.descriptions" :descriptionText='description')
 
 </template>
 
@@ -82,7 +82,7 @@
 import Description from './Description'
 export default {
   name: "work-form",
-  props: ['formInfos', 'index'],
+  props: ['formInfos', 'formLabels', 'index'],
   components: {
     Description
   },
@@ -92,19 +92,26 @@ export default {
   data () {
     return { 
       infos: {
-        instituteName: '',
-        positionTitle: '',
-        dates: [],
-        descriptions: [],
-        instituteLabel: '',
-        positionTitleLabel: ''
+        labels: {
+          title: '',
+          instituteLabel: '',
+          positionTitleLabel: '',
+          descriptionLabel: ''
+        },
+        data: [{
+          instituteName: '',
+          positionTitle: '',
+          dates: [],
+          descriptions: []
+        }]
       },
         menu: false,
         dateErr: 'Date'
     }
   },
   beforeMount () {
-    this.infos = this.formInfos
+    this.infos.data = this.formInfos
+    this.infos.labels = this.formLabels
   },
   methods: {
     submit () {

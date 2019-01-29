@@ -1,7 +1,13 @@
 <template lang="pug">
   div.work-history-factory
     h1 Work History
-    info-form(ref="profile" v-for="(company, index) in companies" :formInfos='company' :index='index')
+    info-form(
+      ref="profile"
+      v-for="(company, index) in companies.data"
+      :formInfos='company'
+      :formLabels='companies.labels'
+      :index='index')
+    
     v-btn(@click="submit") submit
     v-btn(to="skill-factory") back
     v-btn(to="education-factory") next
@@ -28,6 +34,6 @@ export default {
   },
   mounted () {
     this.companies = this.$store.getters.getWorkHistory
-  },
+  }
 }
 </script>

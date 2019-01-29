@@ -59,8 +59,7 @@ export default new Vuex.Store({
       }]
     },
 
-    education:
-    {
+    education: {
       labels: {
         title: "Education",
         instituteLabel: "Institution Name",
@@ -70,7 +69,7 @@ export default new Vuex.Store({
       data: [{
         instituteName: "Federal University of Minas Gerais",
         positionTitle: "Bachelors of Mechanical Engineering",
-        date: ["Feb.2002", "Feb.2003"],
+        dates: ["Feb.2002", "Feb.2003"],
         descriptions:
           ["Currently studying the Front-end Developer path on Europe's largest online education platform."]
       }]

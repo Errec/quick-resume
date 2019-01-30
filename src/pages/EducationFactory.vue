@@ -4,7 +4,7 @@
     info-form(
       ref="infoForm"
       v-for="(insitution, index) in institutions.data"
-      :formInfos='insitution'
+      :formData='insitution'
       :formLabels='institutions.labels'
       :index='index')
   

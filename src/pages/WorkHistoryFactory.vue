@@ -4,7 +4,7 @@
     info-form(
       ref="profile"
       v-for="(company, index) in companies.data"
-      :formInfos='company'
+      :formData='company'
       :formLabels='companies.labels'
       :index='index')
     

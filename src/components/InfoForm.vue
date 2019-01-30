@@ -2,11 +2,12 @@
   div.work-form
     v-form
     v-card.mb-5.px-4(color="grey lighten-4")
-      v-btn.right(@click="clear") clear
+      v-btn.right(@click="clear") Delete
       v-card-title(prunart-title)
         div
           span.headline {{infos.title}}
           span.ml-2.right {{index + 1}}/3
+
       v-text-field(
         outline
         v-validate="'required|max:20'"
@@ -68,12 +69,14 @@
             flat
             color='primary'
             @click='menu = false') Cancel
+
           v-btn(
             flat
             color='primary'
             @click='$refs.menu.save(currentDates)') OK
 
       v-divider.mb-4(color="grey")
+
       description(
         v-for="(description, index) in infos.data.descriptions" 
         ref="description"
@@ -84,8 +87,8 @@
 <script>
 import Description from './Description'
 export default {
-  name: "work-form",
-  props: ['formInfos', 'formLabels', 'index'],
+  name: "info-forms",
+  props: ['formData', 'formLabels', 'index'],
   components: {
     Description
   },
@@ -96,6 +99,7 @@ export default {
     return { 
       infos: {
         labels: {
+          formName: '',
           title: '',
           instituteLabel: '',
           positionTitleLabel: '',
@@ -114,9 +118,9 @@ export default {
     }
   },
   beforeMount () {
-    this.infos.data = this.formInfos
+    this.infos.data = this.formData
     this.infos.labels = this.formLabels
-    this.currentDates = this.formInfos.dates
+    this.currentDates = this.formData.dates
   },
   methods: {
     submit () {
@@ -127,6 +131,11 @@ export default {
     },
     clear () {
       this.$validator.reset() //TODO
+      const payload = {
+        infoFormType: this.infos.labels.formName,
+        index: this.index
+      }
+      this.$store.dispatch('removeInfoForm', payload)
     }
   },
   watch: {
@@ -137,7 +146,7 @@ export default {
 
       if (this.currentDates.length === 2) {
         this.currentDates[0] > this.currentDates[1] ? this.currentDates.pop() : ''
-        alert('data 1 < date 2')
+        alert('checking if data 1 < date 2') //TODO
       }
     }
   }

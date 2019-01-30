@@ -41,51 +41,55 @@ export default new Vuex.Store({
 
     workHistory: {
       labels: {
+        formName: "workHistory",
         title: "Job Experience",
         instituteLabel: "Company Name",
         positionTitleLabel: "Job Title",
-        descriptionLabel: 'Job Description'
+        descriptionLabel: "Job Description"
       },
       data: [
         {
-        instituteName: "1Freelancer-Brazil/Ireland",
-        positionTitle: "Front-end Developer",
-        dates: ["2018-01"],
-        descriptions: [
-          "za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
-        ]
-      },
+          instituteName: "1Freelancer-Brazil/Ireland",
+          positionTitle: "Front-end Developer",
+          dates: ["2018-01"],
+          descriptions: [
+            "za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
+            "za12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
+            "",
+            "za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
+          ]
+        },
         {
-        instituteName: "1Freelancer-Brazil/Ireland",
-        positionTitle: "Front-end Developer",
-        dates: ["2018-01"],
-        descriptions: [
-          "za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za12Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
-          "za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
-        ]
-      }
+          instituteName: "1Freelancer-Brazil/Ireland",
+          positionTitle: "Front-end Developer",
+          dates: ["2018-01"],
+          descriptions: [
+            "za11Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
+            "za13Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js.",
+            "za14Perform website maintenance and enhancements using cutting edge JavaScript and HTML 5 techniques and frameworks like Vue.js."
+          ]
+        }
       ]
     },
 
     education: {
       labels: {
+        formName: "education",
         title: "Education",
         instituteLabel: "Institution Name",
         positionTitleLabel: "Graduation Degree",
-        descriptionLabel: 'Activities Description'
+        descriptionLabel: "Activities Description"
       },
-      data: [{
-        instituteName: "Federal University of Minas Gerais",
-        positionTitle: "Bachelors of Mechanical Engineering",
-        dates: ["2002-01", "2004-12"],
-        descriptions:
-          ["Currently studying the Front-end Developer path on Europe's largest online education platform."]
-      }]
+      data: [
+        {
+          instituteName: "Federal University of Minas Gerais",
+          positionTitle: "Bachelors of Mechanical Engineering",
+          dates: ["2002-01", "2004-12"],
+          descriptions: [
+            "Currently studying the Front-end Developer path on Europe's largest online education platform."
+          ]
+        }
+      ]
     },
 
     additionalExperience:

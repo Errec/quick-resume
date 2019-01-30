@@ -44,7 +44,7 @@
           :error-messages="errors.collect(dateErr)"
           :data-vv-name="dateErr"
           slot='activator'
-          v-model='infos.data.dates'
+          v-model='currentDates'
           multiple
           outline
           chips
@@ -56,7 +56,7 @@
           clearable)
 
         v-date-picker(
-          v-model='infos.data.dates'
+          v-model='currentDates'
           multiple
           no-title
           scrollable
@@ -71,7 +71,7 @@
           v-btn(
             flat
             color='primary'
-            @click='$refs.menu.save(infos.data.dates)') OK
+            @click='$refs.menu.save(currentDates)') OK
 
       v-divider.mb-4(color="grey")
       description(v-for="(description, index) in infos.data.descriptions" :descriptionText='description')
@@ -105,6 +105,7 @@ export default {
           descriptions: []
         }]
       },
+        currentDates: '',
         menu: false,
         dateErr: 'Date'
     }
@@ -112,6 +113,7 @@ export default {
   beforeMount () {
     this.infos.data = this.formInfos
     this.infos.labels = this.formLabels
+    this.currentDates = this.formInfos.dates
   },
   methods: {
     submit () {
@@ -122,9 +124,14 @@ export default {
     }
   },
   watch: {
-    dates (val) {
-      if (this.infos.dates.length > 2) {
-        this.$nextTick(() => this.infos.dates.pop())
+    currentDates () {
+      if (this.currentDates.length > 2) {
+        this.$nextTick(() => this.currentDates.pop())
+      }
+
+      if (this.currentDates.length === 2) {
+        this.currentDates[0] > this.currentDates[1] ? this.currentDates.pop() : ''
+        alert('data 1 < date 2')
       }
     }
   }

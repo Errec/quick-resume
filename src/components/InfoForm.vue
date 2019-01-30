@@ -74,7 +74,10 @@
             @click='$refs.menu.save(currentDates)') OK
 
       v-divider.mb-4(color="grey")
-      description(v-for="(description, index) in infos.data.descriptions" :descriptionText='description')
+      description(
+        v-for="(description, index) in infos.data.descriptions" 
+        ref="description"
+        :descriptionText='description')
 
 </template>
 
@@ -118,6 +121,9 @@ export default {
   methods: {
     submit () {
       this.$validator.validateAll()
+      this.$refs.description.forEach( (child) => {
+        child.submit()
+      } )
     },
     clear () {
       this.$validator.reset() //TODO

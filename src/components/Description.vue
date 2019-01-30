@@ -3,12 +3,12 @@
     v-textarea(
       no-resize
       v-validate="'max:100'"
-      :error-messages="errors.collect(descriptionErr)"
-      :data-vv-name="descriptionErr"
+      :error-messages="errors.collect(descriptionLabel)"
+      :data-vv-name="descriptionLabel"
       :counter="100"
       v-model="description"
       solo
-      label="Job description"
+      :label="descriptionLabel"
       clearable
     )
 </template>
@@ -20,11 +20,19 @@
     mounted () {
       this.description = this.descriptionText
     },
+    $_veeValidate: {
+      validator: 'new'
+    },
     data() {
       return {
         description: '',
-        descriptionErr: 'Job Description'
+        descriptionLabel: 'Activity Description'
       }
-    }
+    },
+    methods: {
+      submit () {
+        this.$validator.validateAll()
+      }
+    },
   }
 </script>

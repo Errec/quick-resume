@@ -2,7 +2,7 @@
   div.education-factory
     h1 Education
     info-form(
-      ref="profile"
+      ref="infoForm"
       v-for="(insitution, index) in institutions.data"
       :formInfos='insitution'
       :formLabels='institutions.labels'
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     submit () {
-      this.$refs.profile.forEach( (child) => {
+      this.$refs.infoForm.forEach( (child) => {
         child.submit()
       } )
     }

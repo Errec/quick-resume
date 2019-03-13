@@ -81,7 +81,9 @@
       description(
         v-for="(description, index) in infos.data.descriptions" 
         ref="description"
-        :descriptionText='description')
+        :descriptionText='description'
+        :numberOfDescriptions='totalDescriptions'
+        :position='index')
 
 </template>
 
@@ -97,7 +99,8 @@ export default {
     validator: 'new'
   },
   data () {
-    return { 
+    return {
+      totalDescriptions: null, 
       infos: {
         labels: {
           formName: '',
@@ -122,6 +125,7 @@ export default {
     this.infos.data = this.formData
     this.infos.labels = this.formLabels
     this.currentDates = this.formData.dates
+    this.totalDescriptions = this.formData.descriptions.length
   },
   methods: {
     submit () {

@@ -8,6 +8,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    config: {
+      MAX_DESCRIPTIONS: 4
+    },
     id: "",
 
     name: {

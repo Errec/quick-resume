@@ -21,6 +21,9 @@ export default {
   getSummary(state) {
     return state.summary
   },
+  getMaxDescriptions(state) {
+    return state.config.MAX_DESCRIPTIONS
+  },
   getKeySkills(state) {
     return state.keySkills
   },

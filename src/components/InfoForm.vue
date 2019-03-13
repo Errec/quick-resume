@@ -2,7 +2,8 @@
   div.work-form
     v-form
     v-card.mb-5.px-4(color="grey lighten-4")
-      v-btn.right(@click="clear") Delete
+      v-btn.right(@click="removeForm" v-if=("totalForms > 1")) Delete
+      v-btn.right(@click="addForm" v-if=("totalForms <= 3 && index === totalForms - 1")) Add
       v-card-title(prunart-title)
         div
           span.headline {{infos.title}}
@@ -88,7 +89,7 @@
 import Description from './Description'
 export default {
   name: "info-forms",
-  props: ['formData', 'formLabels', 'index'],
+  props: ['formData', 'formLabels', 'index', 'totalForms'],
   components: {
     Description
   },
@@ -129,13 +130,17 @@ export default {
         child.submit()
       } )
     },
-    clear () {
+    removeForm () {
       this.$validator.reset() //TODO
       const payload = {
         infoFormType: this.infos.labels.formName,
         index: this.index
       }
       this.$store.dispatch('removeInfoForm', payload)
+    },
+    addForm () {
+      const payload = this.infos.labels.formName      
+      this.$store.dispatch('addInfoForm', payload)
     }
   },
   watch: {
@@ -146,7 +151,6 @@ export default {
 
       if (this.currentDates.length === 2) {
         this.currentDates[0] > this.currentDates[1] ? this.currentDates.pop() : ''
-        alert('checking if data 1 < date 2') //TODO
       }
     }
   }

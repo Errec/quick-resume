@@ -6,7 +6,8 @@
       v-for="(company, index) in companies.data"
       :formData='company'
       :formLabels='companies.labels'
-      :index='index')
+      :index='index'
+      :totalForms='companies.data.length')
     
     v-btn(@click="submit") submit
     v-btn(to="skill-factory") back

@@ -4,7 +4,13 @@ export default {
     if (state[payload.infoFormType].data.length > 1) {
       commit("removeInfoForm", payload)
     } else {
-      alert('Min data 1')
+      return
+    }
+  },
+  addInfoForm ({commit, state}, payload) {
+    if (state[payload].data.length < 3) {
+      commit("addInfoForm", payload)
+    } else {
       return
     }
   }

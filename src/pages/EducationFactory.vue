@@ -6,7 +6,7 @@
       v-for="(insitution, index) in institutions.data"
       :formData='insitution'
       :formLabels='institutions.labels'
-      :index='index')
+      :formIndex='index')
   
     v-btn(@click="submit") submit
     v-btn(to="work-history-factory") back

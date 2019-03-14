@@ -11,5 +11,8 @@ export default {
         descriptions: ['']
       }
     )
+  },
+  addDescription (state, payload) {
+    state[payload.infoFormType].data[payload.formPosition].descriptions.push('')
   }
 }

@@ -3,11 +3,11 @@
     v-form
     v-card.mb-5.px-4(color="grey lighten-4")
       v-btn.right(@click="removeForm" v-if=("totalForms > 1")) Delete
-      v-btn.right(@click="addForm" v-if=("totalForms <= 3 && index === totalForms - 1")) Add
+      v-btn.right(@click="addForm" v-if=("totalForms <= 3 && formIndex === totalForms - 1")) Add
       v-card-title(prunart-title)
         div
           span.headline {{infos.title}}
-          span.ml-2.right {{index + 1}}/3
+          span.ml-2.right {{formIndex + 1}}/3
 
       v-text-field(
         outline
@@ -83,7 +83,9 @@
         ref="description"
         :descriptionText='description'
         :numberOfDescriptions='totalDescriptions'
-        :position='index')
+        :descriptionPosition='index'
+        :formPosition='formIndex'
+        :infoFormType='infos.labels.formName')
 
 </template>
 
@@ -91,7 +93,7 @@
 import Description from './Description'
 export default {
   name: "info-forms",
-  props: ['formData', 'formLabels', 'index', 'totalForms'],
+  props: ['formData', 'formLabels', 'formIndex', 'totalForms'],
   components: {
     Description
   },
@@ -138,7 +140,7 @@ export default {
       this.$validator.reset() //TODO
       const payload = {
         infoFormType: this.infos.labels.formName,
-        index: this.index
+        index: this.formIndex
       }
       this.$store.dispatch('removeInfoForm', payload)
     },
